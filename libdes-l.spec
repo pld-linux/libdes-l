@@ -5,13 +5,6 @@ Version:	4.04b
 Release:	1
 License:	distributable
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Source0:	ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/%{name}-%{version}.tar.gz
 Patch0:		%{name}-makefiles.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,13 +25,6 @@ implementacjЙ crypt(3).
 Summary:	libdes-l Library Development
 Summary(pl):	CzЙ╤Ф dla programistСw biblioteki libdes-l
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -53,13 +39,6 @@ potrzebne do kompilowania aplikacji korzystaj╠cych z libdes-l.
 Summary:	Static libdes-l Library
 Summary(pl):	Statyczna biblioteka libdes-l
 Group:		Development/Libraries
-Group(de):	Entwicklung/Libraries
-Group(es):	Desarrollo/Bibliotecas
-Group(fr):	Development/Librairies
-Group(pl):	Programowanie/Biblioteki
-Group(pt_BR):	Desenvolvimento/Bibliotecas
-Group(ru):	Разработка/Библиотеки
-Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name}-devel = %{version}
 
 %description static
