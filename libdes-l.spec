@@ -67,8 +67,6 @@ install des.h $RPM_BUILD_ROOT%{_includedir}
 
 ln -sf %{_libdir}/liblibdes.so.%{version} $RPM_BUILD_ROOT%{_libdir}/liblibdes.so
 
-gzip -9nf COPYRIGHT INSTALL README VERSION *.man options.txt
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -83,7 +81,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(644,root,root) %{_libdir}/liblibdes.so
 %attr(644,root,root) %{_includedir}/*
-%doc *.gz
+%doc COPYRIGHT INSTALL README VERSION *.man options.txt
 
 %files static
 %defattr(644,root,root,755)
