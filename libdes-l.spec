@@ -6,6 +6,7 @@ Release:	1
 License:	distributable
 Group:		Development/Libraries
 Source0:	ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/%{name}-%{version}.tar.gz
+# Source0-md5:	951475d248a5c675daed508ee2b82a5b
 Patch0:		%{name}-makefiles.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
