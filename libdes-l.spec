@@ -22,6 +22,12 @@ It supports ecb, cbc, ofb, cfb, triple ecb, triple cbc, triple ofb,
 triple cfb, desx, and MIT's pcbc encryption modes and also has a fast
 implementation of crypt(3).
 
+%description -l pl
+Jest to zestaw bibliotek kryptograficznych DES oraz program szyfruj±cy.
+Wspiera tryby szyfrowania: ecb, cbc, ofb, cfb, triple ecb, triple cbc, 
+triple ofb, triple cfb, desx oraz MIT's pcbc. Ma tak¿e szybk± 
+implementacjê crypt(3).
+
 %package -n libdes-l-devel
 Summary:	libdes-l Library Development 
 Summary(pl):	Czê¶æ dla programistów biblioteki libdes-l
@@ -98,7 +104,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(644,root,root) %{_libdir}/liblibdes.so
 %attr(644,root,root) %{_includedir}/* 
-%doc COPYRIGHT.gz INSTALL.gz README.gz VERSION.gz *.man.gz options.txt.gz
+%doc *.gz
 
 %files -n libdes-l-static
 %defattr(644,root,root,755)
