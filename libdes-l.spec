@@ -1,6 +1,6 @@
-Summary:	DES encryption library 
-Summary(pl):	Biblioteka DES
-Name:		libdes-l		
+Summary:	DES encryption library
+Summary(pl):	Biblioteka kodowania DES
+Name:		libdes-l
 Version:	4.04b
 Release:	1
 License:	distributable
@@ -24,12 +24,12 @@ implementation of crypt(3).
 
 %description -l pl
 Jest to zestaw bibliotek kryptograficznych DES oraz program szyfruj±cy.
-Wspiera tryby szyfrowania: ecb, cbc, ofb, cfb, triple ecb, triple cbc, 
-triple ofb, triple cfb, desx oraz MIT's pcbc. Ma takøe szybk± 
+Wspiera tryby szyfrowania: ecb, cbc, ofb, cfb, triple ecb, triple cbc,
+triple ofb, triple cfb, desx oraz MIT's pcbc. Ma takøe szybk±
 implementacjÍ crypt(3).
 
-%package -n libdes-l-devel
-Summary:	libdes-l Library Development 
+%package devel
+Summary:	libdes-l Library Development
 Summary(pl):	CzÍ∂Ê dla programistÛw biblioteki libdes-l
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
@@ -39,18 +39,18 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
 Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
-Requires:	libdes-l
+Requires:	%{name} = %{version}
 
-%description -n libdes-l-devel
+%description devel
 The libdes-l-devel package contains the header files and some
 documentation needed to develop application with libdes-l.
 
-%description -n libdes-l-devel -l pl
+%description devel -l pl
 Pakiet libdes-l-devel zawiera pliki nag≥Ûwkowe i dokumentacjÍ,
-potrzebne do kompilowania aplikacji korzystaj±cych z libdes-l
+potrzebne do kompilowania aplikacji korzystaj±cych z libdes-l.
 
-%package -n libdes-l-static
-Summary:	Static libdes-l Library 
+%package static
+Summary:	Static libdes-l Library
 Summary(pl):	Statyczna biblioteka libdes-l
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
@@ -60,20 +60,20 @@ Group(pl):	Programowanie/Biblioteki
 Group(pt_BR):	Desenvolvimento/Bibliotecas
 Group(ru):	Ú¡⁄“¡¬œ‘À¡/‚…¬Ã…œ‘≈À…
 Group(uk):	Úœ⁄“œ¬À¡/‚¶¬Ã¶œ‘≈À…
-Requires:	libdes-l-devel 
+Requires:	%{name}-devel = %{version}
 
-%description -n libdes-l-static
+%description static
 Static libdes-l library.
 
-%description -n libdes-l-static -l pl
+%description static -l pl
 Statyczna biblioteka libdes-l.
 
 %prep
 %setup -q -n des
-%patch0 -p1 
+%patch0 -p1
 
 %build
-%{__make} 
+%{__make}
 %{__make} -f Makefile.shared clean
 %{__make} -f Makefile.shared
 
@@ -86,26 +86,26 @@ install libdes.so $RPM_BUILD_ROOT%{_libdir}/liblibdes.so.%{version}
 install libdes.a $RPM_BUILD_ROOT%{_libdir}/liblibdes.a
 install des.h $RPM_BUILD_ROOT%{_includedir}
 
-ln -s %{_libdir}/liblibdes.so.%{version} $RPM_BUILD_ROOT%{_libdir}/liblibdes.so
+ln -sf %{_libdir}/liblibdes.so.%{version} $RPM_BUILD_ROOT%{_libdir}/liblibdes.so
 
 gzip -9nf COPYRIGHT INSTALL README VERSION *.man options.txt
-
-%post -p /sbin/ldconfig 
-%postun -p /sbin/ldconfig 
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%files 
+%post	-p /sbin/ldconfig
+%postun	-p /sbin/ldconfig
+
+%files
 %defattr(644,root,root,755)
 %attr(644,root,root) %{_libdir}/liblibdes.so.%{version}
 
-%files -n libdes-l-devel
+%files devel
 %defattr(644,root,root,755)
 %attr(644,root,root) %{_libdir}/liblibdes.so
-%attr(644,root,root) %{_includedir}/* 
+%attr(644,root,root) %{_includedir}/*
 %doc *.gz
 
-%files -n libdes-l-static
+%files static
 %defattr(644,root,root,755)
 %attr(644,root,root) %{_libdir}/liblibdes.a
