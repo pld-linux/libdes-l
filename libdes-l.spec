@@ -16,10 +16,10 @@ triple cfb, desx, and MIT's pcbc encryption modes and also has a fast
 implementation of crypt(3).
 
 %description -l pl
-Jest to zestaw bibliotek kryptograficznych DES oraz program szyfruj±cy.
-Wspiera tryby szyfrowania: ecb, cbc, ofb, cfb, triple ecb, triple cbc,
-triple ofb, triple cfb, desx oraz MIT's pcbc. Ma tak¿e szybk±
-implementacjê crypt(3).
+Jest to zestaw bibliotek kryptograficznych DES oraz program
+szyfruj±cy. Wspiera tryby szyfrowania: ecb, cbc, ofb, cfb, triple ecb,
+triple cbc, triple ofb, triple cfb, desx oraz MIT's pcbc. Ma tak¿e
+szybk± implementacjê crypt(3).
 
 %package devel
 Summary:	libdes-l Library Development
