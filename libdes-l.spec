@@ -4,7 +4,7 @@ Name:		libdes-l
 Version:	4.04b
 Release:	1
 License:	distributable
-Group:		Development/Libraries
+Group:		Libraries
 Source0:	ftp://ftp.psy.uq.oz.au/pub/Crypto/DES/%{name}-%{version}.tar.gz
 # Source0-md5:	951475d248a5c675daed508ee2b82a5b
 Patch0:		%{name}-makefiles.patch
@@ -76,14 +76,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_libdir}/liblibdes.so.%{version}
+%attr(755,root,root) %{_libdir}/liblibdes.so.%{version}
 
 %files devel
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_libdir}/liblibdes.so
-%attr(644,root,root) %{_includedir}/*
 %doc COPYRIGHT INSTALL README VERSION *.man options.txt
+%attr(755,root,root) %{_libdir}/liblibdes.so
+%{_includedir}/*
 
 %files static
 %defattr(644,root,root,755)
-%attr(644,root,root) %{_libdir}/liblibdes.a
+%{_libdir}/liblibdes.a
