@@ -26,7 +26,7 @@ szybk± implementacjê crypt(3).
 Summary:	libdes-l Library Development
 Summary(pl):	Czê¶æ dla programistów biblioteki libdes-l
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 The libdes-l-devel package contains the header files and some
@@ -40,7 +40,7 @@ potrzebne do kompilowania aplikacji korzystaj±cych z libdes-l.
 Summary:	Static libdes-l Library
 Summary(pl):	Statyczna biblioteka libdes-l
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libdes-l library.
