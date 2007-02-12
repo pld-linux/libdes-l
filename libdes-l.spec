@@ -1,5 +1,5 @@
 Summary:	DES encryption library
-Summary(pl):	Biblioteka kodowania DES
+Summary(pl.UTF-8):   Biblioteka kodowania DES
 Name:		libdes-l
 Version:	4.04b
 Release:	1
@@ -16,15 +16,15 @@ It supports ecb, cbc, ofb, cfb, triple ecb, triple cbc, triple ofb,
 triple cfb, desx, and MIT's pcbc encryption modes and also has a fast
 implementation of crypt(3).
 
-%description -l pl
+%description -l pl.UTF-8
 Jest to zestaw bibliotek kryptograficznych DES oraz program
-szyfruj±cy. Wspiera tryby szyfrowania: ecb, cbc, ofb, cfb, triple ecb,
-triple cbc, triple ofb, triple cfb, desx oraz MIT's pcbc. Ma tak¿e
-szybk± implementacjê crypt(3).
+szyfrujÄ…cy. Wspiera tryby szyfrowania: ecb, cbc, ofb, cfb, triple ecb,
+triple cbc, triple ofb, triple cfb, desx oraz MIT's pcbc. Ma takÅ¼e
+szybkÄ… implementacjÄ™ crypt(3).
 
 %package devel
 Summary:	libdes-l Library Development
-Summary(pl):	Czê¶æ dla programistów biblioteki libdes-l
+Summary(pl.UTF-8):   CzÄ™Å›Ä‡ dla programistÃ³w biblioteki libdes-l
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -32,20 +32,20 @@ Requires:	%{name} = %{version}-%{release}
 The libdes-l-devel package contains the header files and some
 documentation needed to develop application with libdes-l.
 
-%description devel -l pl
-Pakiet libdes-l-devel zawiera pliki nag³ówkowe i dokumentacjê,
-potrzebne do kompilowania aplikacji korzystaj±cych z libdes-l.
+%description devel -l pl.UTF-8
+Pakiet libdes-l-devel zawiera pliki nagÅ‚Ã³wkowe i dokumentacjÄ™,
+potrzebne do kompilowania aplikacji korzystajÄ…cych z libdes-l.
 
 %package static
 Summary:	Static libdes-l Library
-Summary(pl):	Statyczna biblioteka libdes-l
+Summary(pl.UTF-8):   Statyczna biblioteka libdes-l
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static libdes-l library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka libdes-l.
 
 %prep
