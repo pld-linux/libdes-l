@@ -1,5 +1,5 @@
 Summary:	DES encryption library
-Summary(pl.UTF-8):   Biblioteka kodowania DES
+Summary(pl.UTF-8):	Biblioteka kodowania DES
 Name:		libdes-l
 Version:	4.04b
 Release:	1
@@ -24,7 +24,7 @@ szybką implementację crypt(3).
 
 %package devel
 Summary:	libdes-l Library Development
-Summary(pl.UTF-8):   Część dla programistów biblioteki libdes-l
+Summary(pl.UTF-8):	Część dla programistów biblioteki libdes-l
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -38,7 +38,7 @@ potrzebne do kompilowania aplikacji korzystających z libdes-l.
 
 %package static
 Summary:	Static libdes-l Library
-Summary(pl.UTF-8):   Statyczna biblioteka libdes-l
+Summary(pl.UTF-8):	Statyczna biblioteka libdes-l
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
